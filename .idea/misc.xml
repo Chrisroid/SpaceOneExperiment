@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/activity_main.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/add_new_aircraft.xml" value="0.21" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/aircraft_item.xml" value="0.1" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/details_fargment.xml" value="0.25" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/details_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/fragment_add_new_aircraft.xml" value="0.1" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/fragment_update_aircraft.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/overview_fragment.xml" value="0.1118659420289855" />
+        <entry key="..\:/Users/Christian/Documents/Development/spaceoneexperiment1/app/src/main/res/layout/product_item.xml" value="0.21" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

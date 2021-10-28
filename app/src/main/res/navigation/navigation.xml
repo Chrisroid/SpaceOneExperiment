@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/overviewFragment">
+
+    <fragment
+        android:id="@+id/overviewFragment"
+        android:name="com.example.spaceoneexperiment.presentation.fragments.OverviewFragment"
+        android:label="OverviewFragment" >
+        <action
+            android:id="@+id/action_overviewFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_overviewFragment_to_addNewAircraftFragment"
+            app:destination="@id/addNewAircraftFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.spaceoneexperiment.presentation.fragments.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment"
+        >
+        <argument
+            android:name="selectedAircraft"
+            app:argType="com.example.spaceoneexperiment.models.Aircraft" />
+        <action
+            android:id="@+id/action_detailsFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_updateAircraftFragment"
+            app:destination="@id/updateAircraftFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAircraftFragment"
+        android:name="com.example.spaceoneexperiment.presentation.fragments.UpdateAircraftFragment"
+        android:label="fragment_update_aircraft"
+        tools:layout="@layout/fragment_update_aircraft" >
+        <argument
+            android:name="aircraft"
+            app:argType="com.example.spaceoneexperiment.models.Aircraft" />
+        <action
+            android:id="@+id/action_updateAircraftFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewAircraftFragment"
+        android:name="com.example.spaceoneexperiment.presentation.fragments.AddNewAircraftFragment"
+        android:label="AddNewAircraftFragment" >
+        <action
+            android:id="@+id/action_addNewAircraftFragment_to_overviewFragment"
+            app:destination="@id/overviewFragment" />
+    </fragment>
+</navigation>
