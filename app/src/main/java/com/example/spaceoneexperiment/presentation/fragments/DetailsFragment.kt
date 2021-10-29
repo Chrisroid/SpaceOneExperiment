@@ -14,7 +14,7 @@ import com.example.spaceoneexperiment.presentation.DetailViewModelFactory
 
 class DetailsFragment : Fragment() {
 
-    lateinit var viewModel : DetailsViewModel
+    lateinit var viewModel: DetailsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,37 +28,30 @@ class DetailsFragment : Fragment() {
 
         val application = requireNotNull(activity).application
 
-        val aircraft  = DetailsFragmentArgs.fromBundle(requireArguments()).selectedAircraft
+        val aircraft = DetailsFragmentArgs.fromBundle(requireArguments()).selectedAircraft
 
         val viewModelFactory = DetailViewModelFactory(aircraft, application)
 
-        viewModel =  ViewModelProvider(
-            this, viewModelFactory).get(DetailsViewModel::class.java)
+        viewModel = ViewModelProvider(
+            this, viewModelFactory
+        ).get(DetailsViewModel::class.java)
 
         binding.viewmodel = viewModel
 
-
-//        binding.viewmodel = ViewModelProvider(
-//            this, viewModelFactory).get(DetailsViewModel::class.java)
-
-
-//        binding.deleteButton.setOnClickListener {
-//            this.findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToOverviewFragment())
-//        }
-
         binding.updateButton.setOnClickListener {
-            this.findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToUpdateAircraftFragment(viewModel.aircraft.value!!))
+            this.findNavController()
+                .navigate(
+                DetailsFragmentDirections.actionDetailsFragmentToUpdateAircraftFragment(viewModel.aircraft.value!!)
+            )
         }
 
         viewModel.navigateOverviewFragment.observe(viewLifecycleOwner, Observer {
-            if ( null != it ) {
-                this.findNavController().navigate(DetailsFragmentDirections.actionDetailsFragmentToOverviewFragment())
+            if (null != it) {
+                this.findNavController()
+                    .navigate(DetailsFragmentDirections.actionDetailsFragmentToOverviewFragment())
                 viewModel.navigationDone()
             }
         })
         return binding.root
     }
-
-
-
 }

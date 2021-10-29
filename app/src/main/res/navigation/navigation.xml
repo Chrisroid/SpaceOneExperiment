@@ -15,7 +15,6 @@
         <action
             android:id="@+id/action_overviewFragment_to_addNewAircraftFragment"
             app:destination="@id/addNewAircraftFragment" />
-
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"

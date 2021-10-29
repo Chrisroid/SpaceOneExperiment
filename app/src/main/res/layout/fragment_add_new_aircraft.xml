@@ -17,33 +17,42 @@
         android:padding="8dp"
         tools:context=".presentation.fragments.UpdateProductFragment">
 
-        <EditText
-            android:id="@+id/name_editText"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Name"
-            android:minHeight="48dp" />
+            android:layout_height="wrap_content" >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Name"
+                android:minHeight="48dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/m_editText"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Manufacturer"
-            android:minHeight="48dp" />
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/m_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Manufacturer"
+                android:minHeight="48dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/my_editText"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Manufacturing Year"
-            android:minHeight="48dp" />
+            android:layout_height="wrap_content">
 
-        <!--        <EditText-->
-        <!--            android:id="@+id/category_editText"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:hint="Category Id"-->
-        <!--            android:minHeight="48dp" />-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/my_editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Manufacturing Year"
+                android:inputType="number"
+                android:maxEms="4"
+                android:maxLength="4"
+                android:minHeight="48dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/add_button"

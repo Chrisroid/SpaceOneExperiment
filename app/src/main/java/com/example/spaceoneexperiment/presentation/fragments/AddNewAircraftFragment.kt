@@ -58,7 +58,7 @@ class AddNewAircraftFragment : Fragment() {
                 response: Response<ResponseBody>
             ) {
 
-                Log.d("AddNewAircraftFragment - Success", response.message())
+                +Log.d("AddNewAircraftFragment - Success", response.message())
                 findNavController().navigate(AddNewAircraftFragmentDirections.actionAddNewAircraftFragmentToOverviewFragment())
 
             }
